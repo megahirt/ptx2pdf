@@ -110,6 +110,9 @@ jobs:
       - name: Install pytest
         run: pip install pytest
 
+      - name: Create tmp projects directory for archive verification
+        run: mkdir -p test/tmp
+
       - name: Run integration tests
         working-directory: test
         run: >
